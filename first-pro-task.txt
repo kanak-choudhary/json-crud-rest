@@ -1,0 +1,37 @@
+NOTE: create a hybride server()
+
+
+RESTful API - JSON
+
+GET /user - list all user (throw html doc)
+GET /api/user/ - (api throw json data)
+
+GET /user/1 - Get the user with id 01
+GET /user/2 - Get the user with id 02
+
+// Solution: we need to made dynamic path parameters
+// GET /api/users/:id 
+
+POST /user - create new user
+
+PATCH /user/1 - edit the user with ID 01
+
+DELETE /user/01 - DELETE user with id 01
+
+get data in hardcode(JSON) use this website: mockaroo.com (generate fake data for testing perpose)
+
+
+Solution with flow: 
+
+{.   // boiler plate: index,js
+
+> require express
+> store in app
+> create a port number: 3000
+> app listing on port number 
+> create fake data in MOCK_DATA.json
+> require MOCK_DATA.json
+> Create routes for multiple request
+> listening the app in port number 
+
+}
