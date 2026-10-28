@@ -30,7 +30,7 @@ app.get('/user', (req, res) => {
 // HOME
 
 app.get('/', (req, res) => {
-    return res.end("this is home page")
+    return res.send("this is home page")
 })
 
 // USER ROUTE
@@ -85,6 +85,7 @@ app.patch('/api/user/:id', (req, res) => {
         if (err) {     // Check
             return res.status(500).json({ message: "Error updating user" });
         }
+    
 
         return res.json({
             message: "User updated successfully",
