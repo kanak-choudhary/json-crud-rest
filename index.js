@@ -18,6 +18,11 @@ app.use(express.json());
 
 // server side rendring..
 app.get('/user', (req, res) => {
+
+    res.set("X-App-Name", "User API");
+    res.set("X-API-Version", "1.0");
+    res.set("Cache-Control", "no-store");
+
     const html = `
 
     <ul> ${users.map((user) => `<li>${user.first_name} </li>`).join("")
@@ -30,6 +35,10 @@ app.get('/user', (req, res) => {
 // HOME
 
 app.get('/', (req, res) => {
+
+    res.header("X-Developer", "Backend Team");
+    res.header("X-Environment", "Development");
+    
     return res.send("this is home page")
 })
 

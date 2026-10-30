@@ -5,9 +5,9 @@ const app = express()
 const PORT = 3001
 
 app.get("/", (req, res) => {
+    res.set("Text-content","plain")
     res.send("This is home page") //  we can send Text, HTML, Buffer, object jaise responses
 })
-
 
 app.get("/about", (req, res) => {
 
